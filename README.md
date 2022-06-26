@@ -2,6 +2,10 @@
 
 応用数学II(JKLクラス)用のLaTeXレポートテンプレート．
 
+## 動作例
+
+現状でコンパイルすると，[このようなPDF](https://drive.google.com/file/d/1OAKfjrCTTmjiWtqTThP8S44Hw1opDsl_/view?usp=sharing)が生成されます．
+
 ## 必要な環境
 
 TeX Live 2021 or [Cloud LaTeX](https://cloudlatex.io/)
