@@ -1,0 +1,35 @@
+\usepackage{ifthen}
+
+\newcounter{question_counter}
+\newcounter{subquestion_counter}
+
+\setcounter{question_counter}{0}
+\setcounter{subquestion_counter}{0}
+
+\newcommand{\question}[2]{
+  \ifthenelse{\equal{\value{question_counter}}{0}}{}{\vskip \baselineskip}
+  \addtocounter{question_counter}{1}
+  \setcounter{subquestion_counter}{0}
+  \noindent
+  \large
+  \textbf{[\arabic{question_counter}. #1]}
+  
+  \normalsize #2
+  \vskip.25 \baselineskip
+}
+
+\newcommand{\subquestion}[1]{
+  \ifthenelse{\equal{\value{subquestion_counter}}{0}}{}{\vskip.5 \baselineskip}
+  \addtocounter{subquestion_counter}{1}
+  \noindent
+  \textbf{問\arabic{question_counter}.\arabic{subquestion_counter}} #1
+  \vskip.1 \baselineskip
+}
+
+\newcommand{\image}[1]{
+  \vskip.25 \baselineskip
+  \begin{center}
+    \includegraphics[width=5cm]{#1}
+  \end{center}
+  \vskip.25 \baselineskip
+}
